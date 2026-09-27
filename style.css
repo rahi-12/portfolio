@@ -259,6 +259,17 @@ header {
     margin-bottom: 15px;
 }
 
+.project-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 20px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: right center;
+}
+
 .project-card p {
     color: var(--muted);
 }
