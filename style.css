@@ -4,15 +4,16 @@
 ========================= */
 
 :root {
-    --paper: #f8f8f3;
-    --surface: #fffefa;
-    --text: #203329;
-    --muted: #596b5e;
-    --muted-soft: #748276;
-    --pine: #234a35;
-    --pine-deep: #193a28;
-    --line: #d9e1d7;
-    --line-strong: #afc1b2;
+    --paper: #171211;
+    --surface: rgba(37, 27, 24, 0.78);
+    --text: #f5ece6;
+    --muted: #d0bdb1;
+    --muted-soft: #ad9587;
+    --accent: #ff7048;
+    --accent-deep: #ff956b;
+    --button-text: #24120d;
+    --line: #49342d;
+    --line-strong: #765345;
 }
 
 * {
@@ -24,7 +25,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: var(--paper);
+    background:
+        linear-gradient(rgba(23, 17, 15, 0.86), rgba(23, 17, 15, 0.86)),
+        url("images/xins_corner.jpg") center / cover no-repeat fixed;
     color: var(--text);
     line-height: 1.6;
 }
@@ -39,7 +42,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(248, 248, 243, 0.94);
+    background: rgba(23, 18, 17, 0.92);
     border-bottom: 1px solid var(--line);
 }
 
@@ -72,7 +75,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: var(--pine);
+    color: var(--accent);
 }
 
 
@@ -96,7 +99,7 @@ header {
 }
 
 .small-text {
-    color: var(--pine);
+    color: var(--accent);
     font-size: 18px;
     margin-bottom: 10px;
 }
@@ -132,8 +135,8 @@ header {
 
     padding: 12px 24px;
 
-    background: var(--pine);
-    color: var(--surface);
+    background: var(--accent);
+    color: var(--button-text);
 
     text-decoration: none;
     border-radius: 6px;
@@ -145,11 +148,13 @@ header {
 
 .btn:hover {
     transform: translateY(-3px);
+    background: var(--accent-deep);
+    color: var(--button-text);
 }
 
 .secondary-btn {
     background: transparent;
-    color: var(--pine);
+    color: var(--accent);
     border: 1px solid var(--line-strong);
 }
 
@@ -202,6 +207,8 @@ header {
     border-radius: 10px;
 
     background: var(--surface);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 
     transition: 0.3s;
 }
@@ -240,6 +247,8 @@ header {
     padding: 30px;
 
     background: var(--surface);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 
     border: 1px solid var(--line);
     border-radius: 12px;
@@ -276,7 +285,28 @@ header {
     object-position: right center;
 }
 
+.project-image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.project-image-gallery .project-image {
+    height: clamp(280px, 55vw, 560px);
+    margin-bottom: 0;
+    object-fit: contain;
+    object-position: center;
+    background: rgba(23, 17, 15, 0.45);
+}
+
 .project-card p {
+    color: var(--muted);
+}
+
+.project-experience {
+    max-width: 850px;
+    margin: 25px auto 0;
     color: var(--muted);
 }
 
@@ -290,7 +320,7 @@ header {
 
     margin-top: 25px;
 
-    color: var(--pine);
+    color: var(--accent);
     text-decoration: none;
 
     transition: 0.3s;
@@ -321,6 +351,8 @@ header {
     min-width: 0;
 
     background: var(--surface);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 
     border: 1px solid var(--line);
     border-radius: 10px;
@@ -370,7 +402,7 @@ header {
 }
 
 .contact-links a {
-    color: var(--pine);
+    color: var(--accent);
     text-decoration: none;
 
     border-bottom: 1px solid var(--line-strong);
@@ -417,6 +449,10 @@ footer p {
     }
 
     .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image-gallery {
         grid-template-columns: 1fr;
     }
 
@@ -474,7 +510,7 @@ footer p {
     border: 1px solid var(--line);
     border-radius: 20px;
 
-    color: var(--pine);
+    color: var(--accent);
     font-size: 13px;
 }
 
@@ -571,7 +607,7 @@ footer p {
     font-size: 28px;
     cursor: pointer;
 
-    color: var(--pine);
+    color: var(--accent);
 }
 
 /* =========================
@@ -624,7 +660,7 @@ footer p {
 ========================= */
 
 .nav-links a.active {
-    color: var(--pine-deep);
+    color: var(--accent-deep);
 }
 
 
@@ -680,7 +716,7 @@ footer p {
     font-size: 28px;
     cursor: pointer;
 
-    color: var(--pine);
+    color: var(--accent);
 }
 
 
