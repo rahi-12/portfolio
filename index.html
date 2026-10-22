@@ -1,108 +1,100 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Fazly Rahi is a Computer Science and Engineering undergraduate building mobile apps, database-connected software, and web projects.">
+    <meta name="theme-color" content="#171211">
     <title>Fazly Rahi | Portfolio</title>
 
-    <link rel="stylesheet" href="style.css?v=warm-background-20261021">
+    <!-- Lets the CSS hide sections for the reveal animation ONLY when JS is running -->
+    <script>document.documentElement.classList.add("js");</script>
+
+    <!-- Start downloading the most important images immediately -->
+    <link rel="preload" as="image" href="images/xins_corner.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="images/profile.webp" fetchpriority="high">
+
+    <link rel="stylesheet" href="style.css?v=fast-20261022">
 </head>
 
 <body>
 
     <!-- Navigation -->
     <header>
-       <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
 
-    <div class="logo">
-        Fazly Rahi
-    </div>
+            <div class="logo">Fazly Rahi</div>
 
-    <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
+            <button class="menu-button" id="menu-button" type="button"
+                    aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                ☰
+            </button>
 
-    </ul>
-
-    <div class="menu-button">
-        ☰
-    </div>
-
-</nav>
+        </nav>
     </header>
 
 
-<!-- Home -->
-<section id="home" class="hero">
+    <!-- Home -->
+    <section id="home" class="hero">
 
-    <div class="hero-content">
+        <div class="hero-content">
 
-        <p class="small-text">
-            Hello, I'm
-        </p>
+            <p class="small-text">Hello, I'm</p>
 
-        <h1>
-            Fazly Rahi
-        </h1>
+            <h1>Fazly Rahi</h1>
 
-        <h2>
-            Computer Science & Engineering Student | Aspiring Developer
-        </h2>
+            <h2>Computer Science &amp; Engineering Student | Aspiring Developer</h2>
 
-        <p>
-            Computer Science and Engineering undergraduate building mobile,
-            backend, and web projects with a practical, learn-by-building approach.
-        </p>
+            <p>
+                Computer Science and Engineering undergraduate building mobile,
+                backend, and web projects with a practical, learn-by-building approach.
+            </p>
 
-        <div class="hero-buttons">
+            <div class="hero-buttons">
 
-            <a href="#projects" class="btn">
-                View My Projects
-            </a>
+                <a href="#projects" class="btn">View My Projects</a>
 
-            <a href="https://github.com/rahi-12" class="btn secondary-btn" target="_blank" rel="noopener noreferrer">
-                GitHub Profile
-            </a>
+                <a href="https://github.com/rahi-12" class="btn secondary-btn" target="_blank" rel="noopener noreferrer">
+                    GitHub Profile
+                </a>
 
-            <a href="resume/Fazly_Rahi_CV.pdf" class="btn secondary-btn" target="_blank" rel="noopener noreferrer">
-                View CV
-            </a>
+                <a href="resume/Fazly_Rahi_CV.pdf" class="btn secondary-btn" target="_blank" rel="noopener noreferrer">
+                    View CV
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
-
-
-    <div class="hero-image">
-
-        <div class="image-border">
-
-            <img
-                src="images/profile.jpg"
-                alt="Fazly Rahi"
-            >
-
+        <div class="hero-image">
+            <div class="image-border">
+                <img
+                    src="images/profile.webp"
+                    alt="Fazly Rahi"
+                    width="300"
+                    height="300"
+                    fetchpriority="high"
+                    decoding="async"
+                >
+            </div>
         </div>
 
-    </div>
-
-</section>
-
+    </section>
 
 
     <!-- About -->
     <section id="about" class="section">
 
-        <h2 class="section-title">
-            About Me
-        </h2>
+        <h2 class="section-title">About Me</h2>
 
         <div class="about-content">
 
@@ -138,9 +130,7 @@
     <!-- Skills -->
     <section id="skills" class="section">
 
-        <h2 class="section-title">
-            Skills
-        </h2>
+        <h2 class="section-title">Skills</h2>
 
         <div class="skills-container">
 
@@ -160,12 +150,12 @@
             </div>
 
             <div class="skill">
-                <h3>Backend & Databases</h3>
+                <h3>Backend &amp; Databases</h3>
                 <p>.NET, database design, basic SQL queries and C# database connectivity; beginner MongoDB.</p>
             </div>
 
             <div class="skill">
-                <h3>Tools & Embedded Systems</h3>
+                <h3>Tools &amp; Embedded Systems</h3>
                 <p>Git, GitHub, command-line compilation, and Arduino fundamentals.</p>
             </div>
 
@@ -182,9 +172,7 @@
     <!-- Projects -->
     <section id="projects" class="section">
 
-        <h2 class="section-title">
-            Projects
-        </h2>
+        <h2 class="section-title">Projects</h2>
 
         <p class="section-description">
             A selection of websites and mobile apps I've built. Explore the live
@@ -200,9 +188,12 @@
                 <h3>Weather App</h3>
                 <img
                     class="project-image"
-                    src="images/weather-app.png"
+                    src="images/weather-app.webp"
                     alt="Weather app showing current weather in Dhaka and the hourly forecast"
+                    width="1280"
+                    height="720"
                     loading="lazy"
+                    decoding="async"
                 >
                 <p>
                     A cross-platform Flutter weather app that looks up cities
@@ -230,9 +221,12 @@
                 <h3>My Calculator</h3>
                 <img
                     class="project-image"
-                    src="images/calculator-app.png"
+                    src="images/calculator-app.webp"
                     alt="My Calculator Android app running in a Pixel emulator"
+                    width="1280"
+                    height="720"
                     loading="lazy"
+                    decoding="async"
                 >
                 <p>
                     My first Android application, built with Kotlin in Android
@@ -259,15 +253,17 @@
                 <div class="project-image-gallery" aria-label="Website screenshots">
                     <img
                         class="project-image"
-                        src="images/webimg01.jpg"
+                        src="images/webimg01.webp"
                         alt="Doctor portfolio website homepage with profile and consultation booking link"
                         loading="lazy"
+                        decoding="async"
                     >
                     <img
                         class="project-image"
-                        src="images/webimg02.jpg"
+                        src="images/webimg02.webp"
                         alt="Appointment request form with patient contact details and preferred appointment time"
                         loading="lazy"
+                        decoding="async"
                     >
                 </div>
 
@@ -317,38 +313,29 @@
     <!-- Education -->
     <section id="education" class="section">
 
-        <h2 class="section-title">
-            Education
-        </h2>
+        <h2 class="section-title">Education</h2>
 
         <div class="education-container">
 
             <div class="education-card">
-
                 <h3>American International University-Bangladesh</h3>
-
                 <p>Bachelor of Science in Computer Science and Engineering</p>
                 <span>Currently in 10th semester</span>
                 <p class="education-note">
                     Undergraduate studies at American International University-Bangladesh (AIUB).
                 </p>
-
             </div>
 
             <div class="education-card">
-
                 <h3>Higher Secondary Certificate (HSC)</h3>
                 <p>Govt. Science College, Tejgaon, Dhaka</p>
                 <span>GPA 5.00 / 5.00</span>
-
             </div>
 
             <div class="education-card">
-
                 <h3>Secondary School Certificate (SSC)</h3>
                 <p>Bindu Basini Govt. Boys' High School</p>
                 <span>GPA 5.00 / 5.00</span>
-
             </div>
 
         </div>
@@ -359,9 +346,7 @@
     <!-- Contact -->
     <section id="contact" class="section contact-section">
 
-        <h2 class="section-title">
-            Let's Connect
-        </h2>
+        <h2 class="section-title">Let's Connect</h2>
 
         <p>
             Interested in my work, want to discuss an opportunity, or connect?
@@ -370,21 +355,13 @@
 
         <div class="contact-links">
 
-            <a href="mailto:fazlyrahi@gmail.com">
-                fazlyrahi@gmail.com
-            </a>
+            <a href="mailto:fazlyrahi@gmail.com">fazlyrahi@gmail.com</a>
 
-            <a href="https://github.com/rahi-12" target="_blank" rel="noopener noreferrer">
-                GitHub
-            </a>
+            <a href="https://github.com/rahi-12" target="_blank" rel="noopener noreferrer">GitHub</a>
 
-            <a href="https://www.linkedin.com/in/fazly-rahi-95a38939a/" target="_blank" rel="noopener noreferrer">
-                LinkedIn
-            </a>
+            <a href="https://www.linkedin.com/in/fazly-rahi-95a38939a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 
-            <a href="resume/Fazly_Rahi_CV.pdf" target="_blank" rel="noopener noreferrer">
-                View CV
-            </a>
+            <a href="resume/Fazly_Rahi_CV.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
 
         </div>
 
@@ -393,19 +370,12 @@
 
     <!-- Footer -->
     <footer>
-
-        <p>
-            © 2026 Fazly Rahi
-        </p>
-
-        <p>
-            Built with HTML, CSS & JavaScript.
-        </p>
-
+        <p>© 2026 Fazly Rahi</p>
+        <p>Built with HTML, CSS &amp; JavaScript.</p>
     </footer>
 
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 </body>
 </html>
